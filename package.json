@@ -1,0 +1,59 @@
+{
+  "name": "can-steal",
+  "version": "1.0.0",
+  "description": "CanJS with StealJS",
+  "main": "app/App.js",
+  "scripts": {
+    "start": "http-server -a localhost -p 8082 -c-1",
+    "clean": "rimraf ./dist/**/*",
+    "build": "npm run clean && node build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "canjs",
+    "stealjs"
+  ],
+  "author": "",
+  "license": "ISC",
+  "steal": {
+    "main": "app/App.js",
+    "transpiler": "babel",
+    "babelOptions": {
+      "presets": [
+        "es2015"
+      ]
+    },
+    "directories": {
+      "lib": "app"
+    },
+    "plugins": [
+      "steal-css",
+      "steal-less",
+      "steal-sass",
+      "steal-stache"
+    ],
+    "paths": {
+      "can-simple-dom": "./node_modules/can-simple-dom/dist/cjs/can-simple-dom.js"
+    },
+    "meta": {
+      "can-simple-dom": {
+        "format": "cjs"
+      }
+    }
+  },
+  "dependencies": {
+    "can": "^2.3.35",
+    "jquery": "^2.2.4",
+    "steal": "^1.12.6",
+    "steal-tools": "^1.11.10"
+  },
+  "devDependencies": {
+    "http-server": "^0.11.1",
+    "prettier": "^1.18.2",
+    "rimraf": "^2.6.3",
+    "steal-css": "^1.3.2",
+    "steal-less": "^1.3.4",
+    "steal-sass": "^1.1.1",
+    "steal-stache": "^4.1.5"
+  }
+}
