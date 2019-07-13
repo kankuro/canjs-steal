@@ -1,2 +1,2 @@
 # CanJS Steal
-CanJS with StealJS
+CanJs starter pack with StealJs
