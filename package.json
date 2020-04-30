@@ -43,7 +43,7 @@
   },
   "dependencies": {
     "can": "^2.3.35",
-    "jquery": "^2.2.4",
+    "jquery": "^3.5.0",
     "steal": "^1.12.6",
     "steal-tools": "^1.11.10"
   },
